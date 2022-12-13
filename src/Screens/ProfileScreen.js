@@ -3,6 +3,8 @@ import { Center, Heading, Image, Text,View } from 'native-base'
 import { Colors } from 'react-native-paper';
 import Tabs from "../Components/Profile/Tabs";
 
+
+
 function ProfileScreen() {
   return (
     <>

@@ -14,7 +14,7 @@ function SingleProductScreen({route}) {
   return (
     <Box safeArea flex={1} bg={Colors.white}>
         <ScrollView px={5} showsVerticalScrollIndicator={false}>
-          <Image source={{uri:product.image}}
+          <Image source={{uri:"http://192.168.100.4/lygi.web/resources/images/products/" + product.image_name + ".jpg"}}
           alt="Image" 
           w="full" 
           h={300} 
@@ -22,20 +22,20 @@ function SingleProductScreen({route}) {
           />
           <Heading bold fontSize={15} mb={2} lineHeight={22}>
 
-          {product.name}            
+          {product.productName}            
             
           </Heading>
 
-          <Rating value={product.rating} text={`${product.numReviews} reviews`}/>
+          <Rating value={5} text={`${150} reviews`}/>
           <HStack space={2} alignItems="center" my={5}>
-          {product.countInStock > 0 ? (
+          {product.quantityInStock > 0 ? (
           <NumericInput 
             value={value} 
             totalWidth={140} 
             totalHeight={30}
             iconSize={25}
             step={1}
-            maxValue={product.countInStock}
+            maxValue={product.quantityInStock}
             minValue={0}
             borderColor={Colors.blue200}
             rounded
@@ -54,13 +54,13 @@ function SingleProductScreen({route}) {
    
             <Spacer/>
             <Heading bold color={Colors.black} italic fontSize={19}>
-              ${product.price}
+              ${product.buyPrice}
             </Heading>
             </HStack>
             <Text lineHeight={24} fontSize={12}>
             {product.description}
             </Text>
-            <Buttone onPress={() => navigation.navigate("Cart")} bg={Colors.blue200} color={Colors.white} mt={10}>
+            <Buttone onPress={() => navigation.navigate("Cart", product, value)} bg={Colors.blue200} color={Colors.white} mt={10}>
               ADD TO CART
             </Buttone>
             {/*REVIEW*/}
