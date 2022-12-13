@@ -12,7 +12,7 @@ function HomeProducts() {
     useEffect(() => {
         //Obtenemos todos los productos
         const orderData = new FormData()
-        axios.get('http://192.168.100.4/lygi.web/public/api/product_show',
+        axios.get('http://192.168.43.219/lygi.web/public/api/product_show',
             orderData,
             {
                 headers: {
@@ -51,7 +51,7 @@ function HomeProducts() {
             overflow="hidden"
             >
                 <Image
-                 source={{ uri: "http://192.168.100.4/lygi.web/resources/images/products/" + product.image_name + ".jpg"}} 
+                 source={{ uri: "http://192.168.43.219/lygi.web/resources/images/products/" + product.image_name + ".jpg"}} 
                 alt={product.productName}
                 w="full" 
                 h={24}

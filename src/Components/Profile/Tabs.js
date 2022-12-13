@@ -7,7 +7,6 @@ import Orders from './Orders';
 import Profile from './Profile';
 import { Text } from 'native-base';
 
-
 const renderScene = SceneMap({
     first:Profile,
     second:Orders,

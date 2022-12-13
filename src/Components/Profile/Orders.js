@@ -15,7 +15,7 @@ const Orders = () => {
 
         const orderData = new FormData()
         orderData.append("customerNumber", 114)
-        axios.post('http://192.168.100.4/lygi.web/public/api/order_customer',
+        axios.post('http://192.168.43.219/lygi.web/public/api/order_customer',
             orderData,
             {
                 headers: {
